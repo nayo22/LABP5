@@ -137,11 +137,11 @@ class Sidebar extends HTMLElement {
       padding: 1rem;
     }
 
-    .cart-item {
+  .cart-item {
       display: flex;
       gap: 1rem;
-      margin-bottom: 1.5rem;
-      align-items: center;
+      margin-bottom: 1rem;
+      align-items: flex-start;
     }
 
     .item-image {
@@ -157,16 +157,20 @@ class Sidebar extends HTMLElement {
       flex: 1;
       font-size: 0.9rem;
       color: var(--text);
+      gap: 0.25rem;
     }
 
     .item-title {
       font-weight: 600;
-      margin: 0 0 0.25rem;
+      margin: 0 0 0.2rem;
+      line-height: 1.2; /* más compacto */
     }
 
     .item-price {
-      color: var(--primary);
+      color: var(--secondary);
       font-weight: bold;
+      margin: 0; /* elimina margen innecesario */
+      font-size: 0.95rem;
     }
 
     .quantity-control {
@@ -179,7 +183,7 @@ class Sidebar extends HTMLElement {
     .quantity-btn {
       width: 24px;
       height: 24px;
-      background: var(--secondary);
+      background: var(--primary);
       border: none;
       border-radius: var(--radius);
       font-size: 1rem;
@@ -192,11 +196,18 @@ class Sidebar extends HTMLElement {
       background: none;
       border: none;
       color: var(--danger);
-      font-size: 0.8rem;
       cursor: pointer;
+      display: flex;
+      justify-content: flex-end;
+      padding: 0;
       margin-top: 0.5rem;
     }
 
+    .trash-icon {
+      width: 18px;
+      height: 18px;
+      pointer-events: none;
+    }
     .sidebar-footer {
       padding: 1rem;
       border-top: 1px solid #eee;
@@ -295,7 +306,11 @@ class Sidebar extends HTMLElement {
 							item.id
 						}, 'increase')">+</button>
           </div>
-          <button class="remove-btn" onclick="this.getRootNode().host.handleRemoveItem(${item.id})">Eliminar</button>
+          <button class="remove-btn" onclick="this.getRootNode().host.handleRemoveItem(${item.id})" title="Eliminar">
+            <svg class="trash-icon" viewBox="0 0 24 24" width="18" height="18" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+              <path d="M3 6h18v2H3V6zm2 3h14v13a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V9zm5 2v9h2v-9H10zm4 0v9h2v-9h-2zM9 4V2h6v2h5v2H4V4h5z"/>
+            </svg>
+          </button>
         </div>
       </div>
     `;
