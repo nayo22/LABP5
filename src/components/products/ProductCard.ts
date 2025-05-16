@@ -33,7 +33,7 @@ class ProductCard extends HTMLElement {
     }
 
     .card {
-      border-radius: 5px;
+      border-radius: 30px;
       background: var(--surface);
       box-shadow: var(--shadow);
       overflow: hidden;
@@ -101,7 +101,7 @@ class ProductCard extends HTMLElement {
       font-weight: 600;
       padding: 0.6rem 1rem;
       font-size: 0.9rem;
-      border-radius: 5px;
+      border-radius: 20px;
       border: none;
       cursor: pointer;
       transition: background 0.3s ease;

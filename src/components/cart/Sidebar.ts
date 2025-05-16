@@ -269,7 +269,7 @@ class Sidebar extends HTMLElement {
         <div class="cart-items">
           ${
 						items.length === 0
-							? `<div class="empty-cart">Tu carrito está vacío</div>`
+							? `<div class="empty-cart">Aún no hay nadita aqui D:</div>`
 							: items.map((item) => this.renderCartItem(item)).join('')
 					}
         </div>
