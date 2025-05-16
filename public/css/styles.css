@@ -18,7 +18,7 @@ body {
   padding: 0 1rem;
 }
 
-/* Paleta pastel minimalista */
+
 :root {
   --primary: #7e3ab6;
   --secondary: #c68bba;
@@ -32,7 +32,7 @@ body {
   --shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
 }
 
-/* Enlaces */
+
 a {
   color: var(--primary);
   text-decoration: none;
@@ -42,13 +42,13 @@ a:hover {
   text-decoration: underline;
 }
 
-/* Imágenes */
+
 img {
   max-width: 100%;
   display: block;
 }
 
-/* Botones globales */
+
 button {
   font-family: inherit;
   border: none;
@@ -57,7 +57,7 @@ button {
   transition: all 0.2s ease;
 }
 
-/* Clases utilitarias */
+
 .container {
   max-width: 1200px;
   margin: auto;

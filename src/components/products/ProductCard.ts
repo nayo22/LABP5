@@ -144,7 +144,7 @@ class ProductCard extends HTMLElement {
           <div class="card-category">${category}</div>
           <h3 class="card-title" title="${title}">${title}</h3>
           <div class="card-price">$${price.toFixed(2)}</div>
-          <button class="btn add-to-cart-btn">Añadir al carrito</button>
+          <button class="btn add-to-cart-btn"> Poner en carrito</button>
         </div>
       </div>
     `;

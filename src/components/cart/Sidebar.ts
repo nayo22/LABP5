@@ -1,4 +1,3 @@
-// src/components/cart/Sidebar.ts
 import { store, State } from '../../flux/Store';
 import { CartActions } from '../../flux/Actions';
 import { CartItem } from '../../types/ProductTypes';
@@ -163,13 +162,13 @@ class Sidebar extends HTMLElement {
     .item-title {
       font-weight: 600;
       margin: 0 0 0.2rem;
-      line-height: 1.2; /* más compacto */
+      line-height: 1.2;
     }
 
     .item-price {
       color: var(--secondary);
       font-weight: bold;
-      margin: 0; /* elimina margen innecesario */
+      margin: 0;
       font-size: 0.95rem;
     }
 
@@ -211,7 +210,7 @@ class Sidebar extends HTMLElement {
     .sidebar-footer {
       padding: 1rem;
       border-top: 1px solid #eee;
-      background-color: var(--background); /* Usa el color de fondo global */
+      background-color: var(--background);
     }
 
 
@@ -280,8 +279,8 @@ class Sidebar extends HTMLElement {
             <span>Total:</span>
             <span>$${total.toFixed(2)}</span>
           </div>
-          <button class="btn checkout-btn" ${items.length === 0 ? 'disabled' : ''}>Finalizar compra</button>
-          <button class="btn clear-cart-btn" ${items.length === 0 ? 'disabled' : ''}>Vaciar carrito</button>
+          <button class="btn checkout-btn" ${items.length === 0 ? 'disabled' : ''}>Terminar compra</button>
+          <button class="btn clear-cart-btn" ${items.length === 0 ? 'disabled' : ''}>Borrar todito</button>
         </div>
       </aside>
       ${this.isCheckoutOpen ? `<checkout-form></checkout-form>` : ''}

@@ -60,7 +60,7 @@ class Checkout extends HTMLElement {
     const address = data.get("address")?.toString().trim();
 
     if (!name || !email || !address) {
-      this.errorMessage = "Por favor completa todos los campos";
+      this.errorMessage = "No dejes espacios vacíos porfi";
       this.render();
       return;
     }
@@ -200,14 +200,14 @@ class Checkout extends HTMLElement {
         color: var(--danger, #ff6b6b);
         background: rgba(255, 107, 107, 0.1);
         padding: 0.75rem;
-        border-radius: 8px;
+        border-radius: 40px;
         margin-bottom: 1rem;
       }
 
       .success-message {
         text-align: center;
         padding: 1rem;
-        border-radius: 8px;
+        border-radius: 40px;
         color:rgb(255, 255, 255);
       }
     `;
@@ -221,7 +221,7 @@ class Checkout extends HTMLElement {
       <style>${this.getStyles()}</style>
       <div class="modal">
         <div class="content">
-          <h2>Finalizar Compra</h2>
+          <h2>Terminar Compra</h2>
 
           ${
             this.isSubmitting
