@@ -110,14 +110,14 @@ class Checkout extends HTMLElement {
           max-width: 480px;
           width: 100%;
           padding: 2rem;
-          margin: 0 auto; 
+          margin: 0 auto;
           display: flex;
           flex-direction: column;
       }
 
       h2 {
         margin-top: 0;
-        color: var(--primary, #6c63ff);
+        color: var(--secondary);
         text-align: center;
       }
 
@@ -145,14 +145,14 @@ class Checkout extends HTMLElement {
         border: 1px solid #ddd;
         border-radius: var(--radius, 8px);
         font-size: 1rem;
-        background-color: #fdf6f9;
-        color: var(--text, #333);
+        background-color:rgb(67, 67, 67);
+        color: white;
         font-family: inherit;
         text-align: left;
       }
 
       textarea {
-        min-height: 80px;
+        min-height: 70px;
         resize: vertical;
       }
 
@@ -185,7 +185,7 @@ class Checkout extends HTMLElement {
       .spinner {
         border: 4px solid rgba(0, 0, 0, 0.1);
         border-radius: 50%;
-        border-top: 4px solid var(--primary, #6c63ff);
+        border-top: 4px solid var(--primary);
         width: 40px;
         height: 40px;
         animation: spin 1s linear infinite;
@@ -206,10 +206,9 @@ class Checkout extends HTMLElement {
 
       .success-message {
         text-align: center;
-        background: rgba(76, 175, 80, 0.1);
         padding: 1rem;
         border-radius: 8px;
-        color: #4caf50;
+        color:rgb(255, 255, 255);
       }
     `;
   }
@@ -226,9 +225,9 @@ class Checkout extends HTMLElement {
 
           ${
             this.isSubmitting
-              ? `<div class="spinner"></div><p style="text-align:center;">Procesando pedido...</p>`
+              ? `<div class="spinner"></div><p style="text-align:center;">Empacando las mechitas</p>`
               : this.isSuccess
-              ? `<div class="success-message">¡Pedido realizado con éxito! Gracias por tu compra 🛍️</div>`
+              ? `<div class="success-message">Todo listoo! relajate que ya casi llega :D</div>`
               : `
               ${
                 this.errorMessage
@@ -238,24 +237,24 @@ class Checkout extends HTMLElement {
 
               <form>
                 <div class="form-group">
-                  <label for="name">Nombre completo</label>
+                  <label for="name">Nombre y apellidos</label>
                   <input type="text" name="name" id="name" required />
                 </div>
 
                 <div class="form-group">
-                  <label for="email">Correo electrónico</label>
+                  <label for="email">Mail</label>
                   <input type="email" name="email" id="email" required />
                 </div>
 
                 <div class="form-group">
-                  <label for="address">Dirección de envío</label>
+                  <label for="address">Dirección</label>
                   <textarea name="address" id="address" required></textarea>
                 </div>
 
                 <p style="text-align:right; font-weight:600;">Total: $${total.toFixed(2)}</p>
 
                 <div class="btn-group">
-                  <button type="submit" class="btn submit-btn">Confirmar</button>
+                  <button type="submit" class="btn submit-btn">Comprar</button>
                   <button type="button" class="btn cancel-btn">Cancelar</button>
                 </div>
               </form>

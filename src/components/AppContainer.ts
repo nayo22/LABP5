@@ -101,7 +101,7 @@ class AppContainer extends HTMLElement {
 
       .logo-title h1 {
         margin: 0;
-        color: var(--primary-color);
+        color: var(--secondary);
         font-size: 1.8rem;
       }
 
@@ -160,7 +160,7 @@ class AppContainer extends HTMLElement {
           <home-page></home-page>
         </main>
 
-        
+
         <cart-sidebar ${this.isCartOpen ? 'open' : ''}></cart-sidebar>
       </div>
     `;

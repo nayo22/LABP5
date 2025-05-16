@@ -55,12 +55,12 @@ class Cart extends HTMLElement {
         cursor: pointer;
         padding: 0.5rem;
         font-size: 1.5rem;
-        color: var(--primary-color, #4c7cff);
+        color: var(--primary-color);
         transition: color 0.2s ease;
       }
 
       .cart-button:hover {
-        color: var(--primary-color-dark, #3a5dbe);
+        color: var(--primary-color-dark);
       }
 
       .cart-icon {
@@ -72,7 +72,7 @@ class Cart extends HTMLElement {
         position: absolute;
         top: -0.2rem;
         right: -0.2rem;
-        background: var(--accent-color, #ff6b6b);
+        background: var(--accent-color);
         color: #fff;
         border-radius: 50%;
         width: 1.2rem;
