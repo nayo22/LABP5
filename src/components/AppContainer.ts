@@ -48,7 +48,7 @@ class AppContainer extends HTMLElement {
 			const products = await getProductsCacheFirst();
 			ProductActions.loadProducts(products);
 		} catch {
-			ProductActions.setError('No se pudieron cargar los productos.');
+			ProductActions.setError('No cargaron los productos.');
 		} finally {
 			ProductActions.setLoading(false);
 		}

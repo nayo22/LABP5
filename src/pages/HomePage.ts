@@ -20,7 +20,7 @@ class HomePage extends HTMLElement {
       width: 100vw;
       margin-left: calc(-50vw + 50%);
       position: relative;
-      background-image: url('/img/1986-nebo.gif'); /* imagen desde public/img */
+      background-image: url('/img/1986-nebo.gif');
       background-size: cover;
       background-position: center;
       background-repeat: no-repeat;
@@ -31,7 +31,7 @@ class HomePage extends HTMLElement {
       content: "";
       position: absolute;
       inset: 0;
-      background: rgba(255, 0, 255, 0.4); /* morado pastel con opacidad */
+      background: rgba(255, 0, 255, 0.4); 
       z-index: 1;
     }
 

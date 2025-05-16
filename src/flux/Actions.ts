@@ -1,10 +1,10 @@
-// src/flux/Actions.ts
+
 import { AppDispatcher } from "./Dispatcher";
 import { Product } from "../types/ProductTypes";
 
 
 
-// Tipos de acción por dominio
+
 export const CounterActionTypes = {
   INCREMENT_COUNT: "INCREMENT_COUNT",
   DECREMENT_COUNT: "DECREMENT_COUNT",
@@ -27,7 +27,7 @@ export const CartActionTypes = {
   CLEAR_CART: "CLEAR_CART",
 };
 
-// Acciones del contador
+
 export const CounterActions = {
   increment: (value: number) =>
     AppDispatcher.dispatch({
@@ -42,7 +42,7 @@ export const CounterActions = {
     }),
 };
 
-// Acciones de usuario
+
 export const UserActions = {
   saveUser: (user: { name: string; age: number }) =>
     AppDispatcher.dispatch({
@@ -51,7 +51,7 @@ export const UserActions = {
     }),
 };
 
-// Acciones de productos
+
 export const ProductActions = {
   loadProducts: (products: Product[]) =>
     AppDispatcher.dispatch({
@@ -72,7 +72,7 @@ export const ProductActions = {
     }),
 };
 
-// Acciones del carrito
+
 export const CartActions = {
   addToCart: (product: Product, quantity: number = 1) =>
     AppDispatcher.dispatch({

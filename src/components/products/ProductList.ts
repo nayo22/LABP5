@@ -1,4 +1,3 @@
-// src/components/products/ProductList.ts
 import { store, State } from "../../flux/Store";
 import { CartActions } from "../../flux/Actions";
 import "./ProductCard";
@@ -36,8 +35,8 @@ class ProductList extends HTMLElement {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
       gap: 2rem;
-      max-width: 1100px;             /* LIMITA el ancho total */
-      margin: 0 auto;                /* CENTRA el grid */
+      max-width: 1100px;
+      margin: 0 auto;
       padding: 1rem;
     }
 

@@ -48,7 +48,7 @@ class Store {
 
   subscribe(listener: Listener): void {
     this._listeners.push(listener);
-    listener(this._state); // Emitir estado actual al suscribirse
+    listener(this._state);
   }
 
   unsubscribe(listener: Listener): void {
@@ -65,7 +65,7 @@ class Store {
     let updated = false;
 
     switch (action.type) {
-      // Contador
+
       case CounterActionTypes.INCREMENT_COUNT:
         if (typeof action.payload === "number") {
           this._state.count += action.payload;
@@ -80,7 +80,7 @@ class Store {
         }
         break;
 
-      // Usuario
+
       case UserActionTypes.SAVE_USER:
         if (typeof action.payload === "object" && action.payload !== null) {
           this._state.user = action.payload as User;
@@ -88,7 +88,7 @@ class Store {
         }
         break;
 
-      // Productos
+
       case ProductActionTypes.LOAD_PRODUCTS:
         if (Array.isArray(action.payload)) {
           this._state.products = action.payload as Product[];
@@ -108,7 +108,7 @@ class Store {
         updated = true;
         break;
 
-      // Carrito
+
       case CartActionTypes.ADD_TO_CART:
         if (
           action.payload &&
@@ -181,7 +181,7 @@ class Store {
         this._state.cart = parsed;
       }
     } catch (e) {
-      console.error("Error al cargar carrito desde localStorage:", e);
+      console.error("Error al cargar carrito:", e);
     }
   }
 }
