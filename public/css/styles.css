@@ -1,0 +1,65 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Nunito', sans-serif;
+  background-color: var(--background);
+  color: var(--text);
+  line-height: 1.6;
+  font-size: 16px;
+  min-height: 100vh;
+  padding: 0 1rem;
+}
+
+/* Paleta pastel minimalista */
+:root {
+  --primary: #7e3ab6;
+  --secondary: #c68bba;
+  --accent: #e5a0d5;
+  --background: #1d1d1d;
+  --surface: #2e2e2e;
+  --text: #ffffff;
+  --text-muted: #888888;
+  --danger: #ff6b6b;
+  --radius: 10px;
+  --shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+}
+
+/* Enlaces */
+a {
+  color: var(--primary);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* Imágenes */
+img {
+  max-width: 100%;
+  display: block;
+}
+
+/* Botones globales */
+button {
+  font-family: inherit;
+  border: none;
+  border-radius: var(--radius);
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+/* Clases utilitarias */
+.container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 2rem 1rem;
+}
